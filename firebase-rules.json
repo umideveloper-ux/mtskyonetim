@@ -1,0 +1,30 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "schools": {
+      ".read": "auth != null",
+      "$schoolId": {
+        ".write": "auth != null && (auth.token.email === data.child('email').val() || auth.token.email === 'admin@surucukursu.com')",
+        "candidates": {
+          ".write": "auth != null && (auth.token.email === root.child('schools').child($schoolId).child('email').val() || auth.token.email === 'admin@surucukursu.com')"
+        }
+      }
+    },
+    "messages": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": "timestamp"
+    },
+    "announcements": {
+      ".read": "auth != null",
+      ".write": "auth != null && (auth.token.email === 'admin@surucukursu.com' || auth.token.email === 'bigagozdemtsk@biga.com' || auth.token.email === 'bigaisiklarmtsk@biga.com' || auth.token.email === 'bigalidermtsk@biga.com' || auth.token.email === 'bigamarmaramtsk@biga.com' || auth.token.email === 'bigateksurmtsk@biga.com')",
+      ".indexOn": "createdAt"
+    },
+    "tasks": {
+      ".read": "auth != null",
+      ".write": "auth != null && (auth.token.email === 'admin@surucukursu.com' || auth.token.email === 'bigagozdemtsk@biga.com' || auth.token.email === 'bigaisiklarmtsk@biga.com' || auth.token.email === 'bigalidermtsk@biga.com' || auth.token.email === 'bigamarmaramtsk@biga.com' || auth.token.email === 'bigateksurmtsk@biga.com')",
+      ".indexOn": "createdAt"
+    }
+  }
+}

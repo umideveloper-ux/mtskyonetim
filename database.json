@@ -1,0 +1,67 @@
+{
+  "schools": {
+    "1": {
+      "name": "ÖZEL BİGA LİDER MTSK",
+      "email": "bigalidermtsk@biga.com",
+      "candidates": {
+        "B": 0,
+        "A1": 0,
+        "A2": 0,
+        "C": 0,
+        "D": 0
+      }
+    },
+    "2": {
+      "name": "ÖZEL BİGA IŞIKLAR MTSK",
+      "email": "bigaisiklarmtsk@biga.com",
+      "candidates": {
+        "B": 0,
+        "A1": 0,
+        "A2": 0,
+        "C": 0,
+        "D": 0
+      }
+    },
+    "3": {
+      "name": "ÖZEL BİGA GÖZDE MTSK",
+      "email": "bigagozdemtsk@biga.com",
+      "candidates": {
+        "B": 0,
+        "A1": 0,
+        "A2": 0,
+        "C": 0,
+        "D": 0
+      }
+    },
+    "4": {
+      "name": "ÖZEL BİGA MARMARA MTSK",
+      "email": "bigamarmaramtsk@biga.com",
+      "candidates": {
+        "B": 0,
+        "A1": 0,
+        "A2": 0,
+        "C": 0,
+        "D": 0
+      }
+    },
+    "5": {
+      "name": "ÖZEL BİGA TEKSÜR MTSK",
+      "email": "bigateksurmtsk@biga.com",
+      "candidates": {
+        "B": 0,
+        "A1": 0,
+        "A2": 0,
+        "C": 0,
+        "D": 0
+      }
+    }
+  },
+  "messages": {
+    "1": {
+      "schoolId": 1,
+      "schoolName": "ÖZEL BİGA LİDER MTSK",
+      "content": "Merhaba, bu bir test mesajıdır.",
+      "timestamp": 1634742000000
+    }
+  }
+}

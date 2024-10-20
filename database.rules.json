@@ -1,0 +1,32 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "schools": {
+      ".read": "auth != null",
+      "$schoolId": {
+        ".read": "auth != null && (auth.token.email === data.child('email').val() || auth.token.email === 'admin@surucukursu.com')",
+        ".write": "auth != null && (auth.token.email === data.child('email').val() || auth.token.email === 'admin@surucukursu.com')",
+        "candidates": {
+          ".read": "auth != null && (auth.token.email === root.child('schools').child($schoolId).child('email').val() || auth.token.email === 'admin@surucukursu.com')",
+          ".write": "auth != null && (auth.token.email === root.child('schools').child($schoolId).child('email').val() || auth.token.email === 'admin@surucukursu.com')"
+        }
+      }
+    },
+    "messages": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": "timestamp"
+    },
+    "announcements": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email === 'admin@surucukursu.com'",
+      ".indexOn": "createdAt"
+    },
+    "tasks": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email === 'admin@surucukursu.com'",
+      ".indexOn": "createdAt"
+    }
+  }
+}
